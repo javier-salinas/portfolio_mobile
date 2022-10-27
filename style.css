@@ -72,6 +72,20 @@ img {
   transition: all ease-in-out 0.5s;
 }
 
+.sm_buttons a {
+  text-decoration: none;
+  font-size: 40px;
+  width: 28px;
+  height: 28px;
+  line-height: 60px;
+  text-align: center;
+  background: gray;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
 .nav-menu a:hover {
   background-color: yellow;
   transform: scale(1.1);
@@ -85,24 +99,10 @@ section {
   text-align: center;
 }
 
-.sm_buttons{
+.sm_buttons {
   min-width: 100%;
   display: flex;
   justify-content: space-around;
-}
-
-.sm_buttons a {
-  text-decoration: none;
-  font-size: 40px;
-  width: 28px;
-  height: 28px;
-  line-height: 60px;
-  text-align: center;
-  background: gray;
-  color: white;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  transition: all .4s ease-in-out;
 }
 
 .sm_buttons a:hover {
