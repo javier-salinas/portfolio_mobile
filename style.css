@@ -10,6 +10,8 @@ body {
   padding: 0;
   min-height: 100vh;
   max-width: 1400px;
+  background-image: url("img/header-shapes.png");
+  background-repeat: no-repeat;
 }
 
 *,
@@ -33,11 +35,6 @@ img {
   overflow: hidden;
   margin-bottom: 0.5rem;
   background-color: rgb(153, 210, 246);
-}
-
-.logo,
-.nav-menu {
-  text-transform: uppercase;
 }
 
 .nav-menu {
@@ -82,4 +79,32 @@ img {
 
 .nav-menu a:active {
   transform: scale(0.9);
+}
+
+section {
+  text-align: center;
+}
+
+.sm_buttons{
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sm_buttons a {
+  text-decoration: none;
+  font-size: 40px;
+  width: 28px;
+  height: 28px;
+  line-height: 60px;
+  text-align: center;
+  background: gray;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+
+.sm_buttons a:hover {
+  transform: scale(1.2);
 }
