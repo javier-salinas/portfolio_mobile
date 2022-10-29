@@ -1,110 +1,180 @@
-html {
-  font-size: 100%;
-  line-height: 1.5rem;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0 auto;
-  padding: 0;
-  min-height: 100vh;
-  max-width: 1400px;
-  background-image: url("img/header-shapes.png");
-  background-repeat: no-repeat;
+:root {
+    --color-primary: rgb(182, 246, 250);
+    --color-primary-variant: rgb(79, 79, 246);
+    --color-gradient: linear-gradient(var(--color-primary), var(--color-primary-variant));
+    --container-width-lg: 80%;
+    --container-width-md: 92%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.header-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  line-height: 1rem;
-  overflow: hidden;
-  margin-bottom: 0.5rem;
-  background-color: rgb(153, 210, 246);
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav-item {
-  flex: 1 0 10%;
-  text-align: center;
+body {
+  background: var(--color-gradient);
+  height: 100vh; 
 }
 
-.logo a,
-.nav-menu a {
+nav {
+  background: white;
+  width: 100vw;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 2rem 2rem rgb(0, 0, 0, 0.2);
+}
+
+.nav_container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_toggle-open {
+  display: none;
+}
+
+.nav_logo {
+  width: 5.4rem;
+  display: grip;
+  place-items: center;
+}
+
+.nav_logo img {
+  width: 150%;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  height: 100%;
+}
+
+.nav_links li {
+  height: 100%;
+}
+
+.nav_links li a{
+  color: black;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 400ms ease;
+  position: relative;
+}
+
+.nav_links li a:hover {
+  color: var(--color-primary);
+}
+
+.nav_links li a.active::after {
+  content: '';
   display: block;
-  text-decoration: none;
-  letter-spacing: 0.2rem;
-  padding: 0.8rem;
-}
-
-.logo {
-  margin: 0 auto;
-}
-
-.logo a {
-  color: rgb(29, 29, 244);
-}
-
-.nav-menu a {
-  color: blueviolet;
-  transition: all ease-in-out 0.5s;
-}
-
-.sm_buttons a {
-  text-decoration: none;
-  font-size: 40px;
-  width: 28px;
-  height: 28px;
-  line-height: 60px;
-  text-align: center;
-  background: gray;
-  color: white;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease-in-out;
-}
-
-.nav-menu a:hover {
-  background-color: yellow;
-  transform: scale(1.1);
-}
-
-.nav-menu a:active {
-  transform: scale(0.9);
+  background: var(--color-primary);
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 section {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-image: url("img/header-shapes.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-.sm_buttons {
-  min-width: 100%;
+section h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: blue;
+}
+
+.container p {
+  padding: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(21, 34, 41);
+}
+
+.container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
-.sm_buttons a:hover {
-  transform: scale(1.2);
+.content {
+  flex-direction: column;
+  align-items: baseline;
+  padding: 24px;
+}
+
+.social-media {
+  font-size: px;
+  padding: 52px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav_container {
+    width: var(--container-width-md);
+    position: relative ;
+  }
+
+  .nav_links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .nav_links li {
+    width: 100%;
+    box-shadow: -2rem 4re, 4rem rgba(0, 0, 0, 0.2);
+  }
+
+  .nav_links li a {
+    background: rgb(165, 170, 247);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem 0 2.5rem;
+    border-top: 1px solid var(--color-primary);
+  }
+
+  .nav_links li a.active::after {
+    display: none;
+  }
+
+  .nav_toggle-open {
+    display: inline-block;
+    font-size: 2rem;
+    color: black;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .nav_toggle-close {
+    display: inline-block;
+  }
 }
