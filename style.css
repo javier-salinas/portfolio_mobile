@@ -1,9 +1,9 @@
 :root {
-    --color-primary: rgb(182, 246, 250);
-    --color-primary-variant: rgb(79, 79, 246);
-    --color-gradient: linear-gradient(var(--color-primary), var(--color-primary-variant));
-    --container-width-lg: 80%;
-    --container-width-md: 92%;
+  --color-primary: rgb(182, 246, 250);
+  --color-primary-variant: rgb(79, 79, 246);
+  --color-gradient: linear-gradient(var(--color-primary), var(--color-primary-variant));
+  --container-width-lg: 80%;
+  --container-width-md: 92%;
 }
 
 *,
@@ -19,7 +19,7 @@
 
 body {
   background: var(--color-gradient);
-  height: 100vh; 
+  height: 100vh;
 }
 
 nav {
@@ -68,7 +68,7 @@ nav {
   height: 100%;
 }
 
-.nav_links li a{
+.nav_links li a {
   color: black;
   font-weight: 500;
   height: 100%;
@@ -134,7 +134,7 @@ section h1 {
 @media screen and (max-width: 1024px) {
   .nav_container {
     width: var(--container-width-md);
-    position: relative ;
+    position: relative;
   }
 
   .nav_links {
@@ -148,7 +148,7 @@ section h1 {
 
   .nav_links li {
     width: 100%;
-    box-shadow: -2rem 4re, 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.2);
   }
 
   .nav_links li a {
